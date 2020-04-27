@@ -123,7 +123,7 @@ static void flush(void)
     /* Wait a moment to receive the remaining garbage but avoid getting stuck
      * because the line is saturated */
     while (Serial.available() && i++ < 10) {
-        Serial.flush();
+        Serial.read();
         delay(3);
     }
 }
