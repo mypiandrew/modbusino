@@ -11,8 +11,8 @@ ModbusinoSlave modbusino_slave(1);
 uint16_t tab_reg[10];
 
 void setup() {
-    /* The transfer speed is set to 115200 bauds */
-    modbusino_slave.setup(115200);
+    /* The transfer speed is set to 9600 baud, slave address 1 */
+     modbusino_slave.setup(9600,1);
 }
 
 void loop() {
